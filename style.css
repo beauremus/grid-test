@@ -5,21 +5,77 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background: #ccc;
-    line-height: 1.2;
+    line-height: 1.618rem;
+    margin: 1rem;
 }
 
-section {
-    padding: 20px;
+header {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    min-width: 425px;
+}
+
+main>section {
     border: 1px solid #999;
     border-radius: 3px;
     background: #fff;
+    padding: 1rem;
+}
+
+section {
+    /* padding: 1rem; */
+}
+
+span {
+    border-radius: 2px;
+    text-align: center;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    display: grid;
+    align-content: center;
+}
+
+.description {
+    background-color: black;
+    color: cyan;
+}
+
+.reading {
+    background-color: greenyellow;
+    color: black;
 }
 
 @supports (display: grid) {
     main {
         display: grid;
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         width: auto;
+    }
+
+    main>section {
+        --flow: row;
+        --rows: '';
+        --columns: repeat(auto-fill, minmax(260px, 1fr));
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: var(--columns);
+        grid-auto-flow: var(--flow);
+        grid-template-rows: var(--rows);
+    }
+
+    .readout {
+        display: grid;
+        grid-gap: .25rem;
+        grid-template-columns: minmax(180px, 2fr) minmax(80px, 1fr);
     }
 }
 
