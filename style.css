@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #ccc;
+    line-height: 1.2;
+}
+
+section {
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: #fff;
+}
+
+@supports (display: grid) {
+    main {
+        display: grid;
+        grid-gap: 2rem;
+        width: auto;
+    }
+}
+
+/* grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); */
