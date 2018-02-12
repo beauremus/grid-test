@@ -36,7 +36,7 @@ main>section {
     padding: 1rem;
 }
 
-span {
+main>section>section>* {
     border-radius: 2px;
     text-align: center;
     padding-left: .25rem;
@@ -61,6 +61,11 @@ span {
 
 .control {
     background: red;
+    color: black;
+}
+
+.setting {
+    width: 6rem;
 }
 
 @supports (display: grid) {
@@ -81,7 +86,7 @@ span {
         grid-template-rows: var(--rows);
     }
 
-    main>section>* {
+    main>section>section {
         display: grid;
         grid-gap: 0.25rem;
         grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
